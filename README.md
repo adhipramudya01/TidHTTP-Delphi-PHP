@@ -2,7 +2,12 @@
 Use HTTP Method to Access PHP URL.
 ==================================
 
-For Simple Online Registration System.
+For Simple "Software Activation" through
+Online Registration System.
+
+
+
+
 Info pls Whatsapp me.
 at +628980114135.
 Paypal.me/adhipramudya5510.
