@@ -1,0 +1,55 @@
+
+
+TidHTTP Delphi 6.
+=================
+
+procedure TForm1.Button1Click(Sender: TObject);
+
+var
+  Params: Tstringlist;
+  Response: TStringstream;
+
+  begin
+      try
+           params:=tstringlist.create;
+           params.Add('namam='+'adhi'); // <-- LOCATION of PROBLEMS
+
+           response:=tstringstream.create('');
+           HTTP.post('http://localhost/test/hallo.php',params, Response);
+           showmessage(response.DataString);
+
+      finally
+           params.Free;
+           Response.Free;
+      end;
+
+
+
+end;
+
+
+
+
+
+
+PHP File :
+==========
+
+
+
+
+<?php
+if(isset($_POST["namam"]))
+{$nama1=$_POST["namam"];}
+else
+{$nama1=" Namam cant you found.";}
+/* */
+if(isset($_POST["namamu"]))
+{$nama2=$_POST["namamu"];}
+else
+{$nama2=" Nama tidak ada di Method.";}
+
+// the OUTPUT :
+echo $nama1;
+echo $nama2;
+?>
